@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Network - Protect Earth</title>
+    <title>Ocean Guardians - Protect Our Seas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,23 +14,25 @@
         }
 
         :root {
-            --primary: #2e7d32;
-            --secondary: #4caf50;
-            --accent: #8bc34a;
-            --light: #e8f5e9;
-            --dark: #1b5e20;
+            --primary: #1a73e8;
+            --secondary: #34a853;
+            --accent: #00bcd4;
+            --light: #e3f2fd;
+            --dark: #0d47a1;
             --text: #333333;
             --white: #ffffff;
+            --ocean-dark: #01579b;
         }
 
         body {
             background-color: var(--light);
             color: var(--text);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         header {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background: linear-gradient(to right, var(--ocean-dark), var(--primary));
             color: var(--white);
             padding: 1rem 0;
             position: sticky;
@@ -101,7 +103,7 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80');
             background-size: cover;
             background-position: center;
             height: 80vh;
@@ -158,7 +160,7 @@
 
         .section-title h2 {
             font-size: 2.5rem;
-            color: var(--primary);
+            color: var(--ocean-dark);
             margin-bottom: 1rem;
             position: relative;
             display: inline-block;
@@ -305,7 +307,7 @@
         }
 
         .cta {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background: linear-gradient(to right, var(--ocean-dark), var(--primary));
             color: var(--white);
             text-align: center;
             padding: 5rem 0;
@@ -422,6 +424,85 @@
             cursor: pointer;
         }
 
+        /* New styles for impact section */
+        .impact {
+            background-color: var(--light);
+        }
+        
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .impact-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .impact-icon {
+            background-color: var(--primary);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        /* Wave divider */
+        .wave-divider {
+            height: 100px;
+            overflow: hidden;
+            transform: rotate(180deg);
+            background-color: var(--light);
+        }
+        
+        .wave-divider svg {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .wave-divider-bottom {
+            transform: rotate(0);
+            background-color: var(--white);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--light);
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-item {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin: 1rem;
+            text-align: center;
+        }
+        
+        .testimonial-item p {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
         @media (max-width: 992px) {
             .about-content {
                 grid-template-columns: 1fr;
@@ -437,6 +518,10 @@
             
             .stats {
                 grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .impact-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -455,7 +540,7 @@
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background-color: var(--primary);
+                background-color: var(--ocean-dark);
                 flex-direction: column;
                 padding: 1rem 0;
                 text-align: center;
@@ -499,8 +584,8 @@
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <i class="fas fa-seedling"></i>
-                <span>Green Network</span>
+                <i class="fas fa-water"></i>
+                <span>Ocean Guardians</span>
             </div>
             <nav>
                 <div class="mobile-menu">
@@ -510,8 +595,8 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#initiatives">Initiatives</a></li>
+                    <li><a href="#impact">Our Impact</a></li>
                     <li><a href="#get-involved">Get Involved</a></li>
-                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -520,9 +605,9 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>Protect Our Planet, Preserve Our Future</h1>
-            <p>Join the global movement to create a sustainable world through conservation, education, and community action.</p>
-            <a href="#get-involved" class="btn">Join Our Network</a>
+            <h1>Protect Our Oceans, Save Our Future</h1>
+            <p>Join the global movement to preserve marine ecosystems, reduce pollution, and ensure a sustainable future for our planet.</p>
+            <a href="#get-involved" class="btn">Join Our Mission</a>
         </div>
     </section>
 
@@ -530,82 +615,166 @@
     <section id="about">
         <div class="container">
             <div class="section-title">
-                <h2>About Green Network</h2>
-                <p>We are a global community dedicated to environmental protection and sustainable development.</p>
+                <h2>About Ocean Guardians</h2>
+                <p>We are a global community dedicated to protecting marine life and preserving our oceans for future generations.</p>
             </div>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team planting trees">
+                    <img src="https://images.unsplash.com/photo-1589552950456-75eeaf7d5b8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Ocean conservation team">
                 </div>
                 <div class="about-text">
                     <h3>Our Mission</h3>
-                    <p>Green Network is committed to creating a sustainable future by protecting natural ecosystems, promoting renewable energy, and empowering communities to take environmental action.</p>
-                    <p>Founded in 2010, we've grown from a small grassroots organization to an international network with over 50,000 members across 120 countries.</p>
-                    <p>Our approach combines scientific research, community engagement, and policy advocacy to address the most pressing environmental challenges of our time.</p>
+                    <p>Ocean Guardians is committed to creating a sustainable future by protecting marine ecosystems, reducing plastic pollution, and promoting responsible fishing practices worldwide.</p>
+                    <p>Founded in 2012, we've grown from a small coastal organization to an international network with over 40,000 volunteers across 90 countries.</p>
+                    <p>Our approach combines scientific research, community engagement, and policy advocacy to address the most pressing challenges facing our oceans today.</p>
                     <a href="#" class="btn">Learn More</a>
                 </div>
             </div>
             <div class="stats">
                 <div class="stat-item">
-                    <i class="fas fa-tree"></i>
-                    <h3 class="counter" data-target="2500000">0</h3>
-                    <p>Trees Planted</p>
+                    <i class="fas fa-fish"></i>
+                    <h3 class="counter" data-target="1200">0</h3>
+                    <p>Marine Species Protected</p>
                 </div>
                 <div class="stat-item">
                     <i class="fas fa-users"></i>
-                    <h3 class="counter" data-target="50000">0</h3>
-                    <p>Active Members</p>
+                    <h3 class="counter" data-target="40000">0</h3>
+                    <p>Active Volunteers</p>
                 </div>
                 <div class="stat-item">
                     <i class="fas fa-globe-americas"></i>
-                    <h3 class="counter" data-target="120">0</h3>
+                    <h3 class="counter" data-target="90">0</h3>
                     <p>Countries Reached</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-recycle"></i>
-                    <h3 class="counter" data-target="1500">0</h3>
+                    <i class="fas fa-trash-alt"></i>
+                    <h3 class="counter" data-target="850">0</h3>
                     <p>Cleanup Projects</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Wave Divider -->
+    <div class="wave-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#e3f2fd"></path>
+        </svg>
+    </div>
+
     <!-- Initiatives Section -->
     <section class="initiatives" id="initiatives">
         <div class="container">
             <div class="section-title">
                 <h2>Our Initiatives</h2>
-                <p>Discover the key programs and projects we're implementing to protect our planet.</p>
+                <p>Discover the key programs and projects we're implementing to protect our oceans.</p>
             </div>
             <div class="initiatives-grid">
                 <div class="initiative-card">
                     <div class="initiative-img">
-                        <img src="https://dialogue.earth/content/uploads/2021/04/lessons-from-the-rush-to-reforest-china-dialogue-2400x1599.jpg" alt="Reforestation">
+                        <img src="https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Plastic Cleanup">
                     </div>
                     <div class="initiative-content">
-                        <h3>Global Reforestation</h3>
-                        <p>Planting millions of trees worldwide to restore ecosystems, combat climate change, and protect biodiversity.</p>
+                        <h3>Plastic Pollution Cleanup</h3>
+                        <p>Removing tons of plastic waste from oceans and coastlines through organized cleanup efforts worldwide.</p>
                         <a href="#" class="btn">Learn More</a>
                     </div>
                 </div>
                 <div class="initiative-card">
                     <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Ocean Conservation">
+                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Coral Reef Restoration">
                     </div>
                     <div class="initiative-content">
-                        <h3>Ocean Conservation</h3>
-                        <p>Protecting marine ecosystems, reducing plastic pollution, and promoting sustainable fishing practices.</p>
+                        <h3>Coral Reef Restoration</h3>
+                        <p>Rebuilding damaged coral ecosystems through innovative restoration techniques and community involvement.</p>
                         <a href="#" class="btn">Learn More</a>
                     </div>
                 </div>
                 <div class="initiative-card">
                     <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Renewable Energy">
+                        <img src="https://images.unsplash.com/photo-1520338258522-60d3c2b4a66d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Marine Education">
                     </div>
                     <div class="initiative-content">
-                        <h3>Renewable Energy</h3>
-                        <p>Promoting solar, wind, and other clean energy sources to reduce dependence on fossil fuels.</p>
+                        <h3>Marine Education</h3>
+                        <p>Educating communities about marine conservation and sustainable practices to protect ocean biodiversity.</p>
                         <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="wave-divider wave-divider-bottom">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#ffffff"></path>
+        </svg>
+    </div>
+
+    <!-- Impact Section -->
+    <section class="impact" id="impact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Impact</h2>
+                <p>See how our efforts are making a tangible difference for ocean conservation.</p>
+            </div>
+            <div class="impact-grid">
+                <div>
+                    <div class="impact-item">
+                        <div class="impact-icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <div>
+                            <h3>Plastic Reduction</h3>
+                            <p>We've helped reduce plastic waste in oceans by over 15% in our target regions through cleanup and recycling programs.</p>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Protected Areas</h3>
+                            <p>Established 28 marine protected areas covering over 2.5 million square kilometers of ocean habitat.</p>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3>Education Reach</h3>
+                            <p>Educated over 500,000 students and community members about marine conservation and sustainable practices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="impact-item">
+                        <div class="impact-icon">
+                            <i class="fas fa-hand-holding-water"></i>
+                        </div>
+                        <div>
+                            <h3>Coral Restoration</h3>
+                            <p>Restored over 12,000 square meters of coral reefs using innovative techniques that increase survival rates.</p>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-icon">
+                            <i class="fas fa-fish"></i>
+                        </div>
+                        <div>
+                            <h3>Species Protection</h3>
+                            <p>Implemented conservation programs that have increased populations of endangered marine species by up to 30%.</p>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <div>
+                            <h3>Clean Water Initiatives</h3>
+                            <p>Improved water quality in 45 coastal communities through sustainable wastewater management programs.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -615,9 +784,9 @@
     <!-- CTA Section -->
     <section class="cta" id="get-involved">
         <div class="container">
-            <h2>Join Our Global Movement</h2>
-            <p>Together, we can create a sustainable future for generations to come. Every action counts, no matter how small.</p>
-            <a href="#" class="btn">Become a Member</a>
+            <h2>Join Our Ocean Conservation Movement</h2>
+            <p>Together, we can protect our oceans and ensure a healthy marine ecosystem for generations to come. Every action makes a difference.</p>
+            <a href="#" class="btn">Become a Volunteer</a>
         </div>
     </section>
 
@@ -626,13 +795,13 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Green Network</h3>
-                    <p>We are dedicated to protecting our planet through collaborative action, education, and sustainable solutions.</p>
+                    <h3>Ocean Guardians</h3>
+                    <p>We are dedicated to protecting our oceans through collaborative action, education, and sustainable solutions.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
@@ -641,29 +810,29 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#initiatives">Initiatives</a></li>
+                        <li><a href="#impact">Our Impact</a></li>
                         <li><a href="#get-involved">Get Involved</a></li>
-                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Our Programs</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Reforestation</a></li>
-                        <li><a href="#">Ocean Cleanup</a></li>
-                        <li><a href="#">Wildlife Protection</a></li>
-                        <li><a href="#">Climate Education</a></li>
-                        <li><a href="#">Sustainable Agriculture</a></li>
+                        <li><a href="#">Plastic Cleanup</a></li>
+                        <li><a href="#">Coral Restoration</a></li>
+                        <li><a href="#">Marine Education</a></li>
+                        <li><a href="#">Policy Advocacy</a></li>
+                        <li><a href="#">Research & Innovation</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Copper Creek Drive, New York</p>
-                    <p><i class="fas fa-phone"></i> +1 (312) 171-0771</p>
-                    <p><i class="fas fa-envelope"></i> support@greennetwork.org</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Ocean Drive, Miami, FL</p>
+                    <p><i class="fas fa-phone"></i> +1 (305) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> contact@oceanguardians.org</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Green Network. All rights reserved.</p>
+                <p>&copy; 2023 Ocean Guardians. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -695,7 +864,31 @@
         }
 
         // Initialize counters when page loads
-        window.addEventListener('load', animateCounters);
+        window.addEventListener('load', function() {
+            // Check if counters are in viewport
+            const counterSection = document.querySelector('#about');
+            const isInViewport = (element) => {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.bottom >= 0
+                );
+            };
+            
+            // Start counter animation when section is in view
+            if(isInViewport(counterSection)) {
+                animateCounters();
+            } else {
+                // Wait for scroll
+                window.addEventListener('scroll', function() {
+                    if(isInViewport(counterSection)) {
+                        animateCounters();
+                        // Remove event listener after animation starts
+                        window.removeEventListener('scroll', arguments.callee);
+                    }
+                });
+            }
+        });
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -718,5 +911,4 @@
         });
     </script>
 </body>
-
 </html>
